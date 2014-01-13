@@ -1,0 +1,14 @@
+{
+    "name": "twodudes/backbone-navigation",
+    "description": "Navigation component for Backbone based applications",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "type": "component",
+    "homepage": "https://github.com/whyte624/backbone-navigation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrei Sozonov",
+            "email": "whyte624@gmail.com"
+        }
+    ]
+}
