@@ -162,6 +162,7 @@ App.Views.Breadcrumbs = Backbone.Marionette.CollectionView.extend({
             that.collection = breadcrumbs;
             that.render();
             that.listenTo(that.collection, 'add', that.render);
+            that.listenTo(that.collection, 'reset', that.render);
         });
     }
 });
