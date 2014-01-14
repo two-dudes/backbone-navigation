@@ -59,6 +59,10 @@ $(function() {
         };
 
         this._mapNavigation = function(route, mappedArgs) {
+            if (!that.tree[route]) {
+                return;
+            }
+            
             var isFunction = typeof(that.tree[route].template) == "function";
 
             var routeParts = route.split('.');
