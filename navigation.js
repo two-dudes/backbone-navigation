@@ -75,7 +75,9 @@ $(function() {
                 mappedArgs: mappedArgs,
                 isResolved: false
             });
-            if (isFunction) {
+
+            var isDeferred = (typeof(page.get('text') == 'Object') && page.get('text').resolve);
+            if (isDeferred) {
                 page.get('text').done(function(template){
                     page.set({'text': template, 'isResolved': true});
                     that.checkBreadcrumbs();
@@ -83,6 +85,7 @@ $(function() {
             } else {
                 page.set('isResolved', true);
             }
+
             this.breadcrumbs.unshift(page);
 
             if (typeof(that.tree[route].parent) != "undefined") {
